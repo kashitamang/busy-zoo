@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap');
+
+header {
+    /* height: 40px;
+    height: 200px; */
+    font-size: 40px;
+    background: -webkit-linear-gradient(pink, rgb(179, 179, 255), rgb(211, 255, 211) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Fredoka One', cursive;
+    display: block;
+    width:306px;
+    height:305px;
+    padding-left: 60px;
+}
