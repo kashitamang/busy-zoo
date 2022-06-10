@@ -5,6 +5,8 @@ import Header from './Components/Header/Header.js';
 import Footer from './Components/Footer/Footer.js';
 import AnimalList from './Components/AnimalList/AnimalList.js';
 import OpenClosedSign from './Components/OpenClosedSign/OpenClosedSign.js';
+import useSound from 'use-sound';
+import themeSong from './themesong.mp3';
 
 function App() {
   //declare hooks
@@ -12,6 +14,9 @@ function App() {
   const [swanSize, setSwanSize] = useState(10);
   const [walrusSize, setWalrusSize] = useState(10);
   const [zooIsOpen, setZooIsOpen] = useState(true);
+  const [play] = useSound(
+    themeSong,
+    { volume: 0.1 });
 
   //click handlers
   function handleGiraffeClick(){
@@ -37,6 +42,7 @@ function App() {
     const copy = animals.slice();
     setAnimals(copy);
   }
+  
   // 🦭 a little walrus for the road 
 
   //returns
@@ -44,7 +50,7 @@ function App() {
     <div className="App">
       <Header/>
       <div className="sign-container">
-        {/* <button>🎶</button> */}
+        <button onClick={play}>🎶</button>
         <OpenClosedSign zooIsOpen={zooIsOpen}/>
         <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
       </div>
