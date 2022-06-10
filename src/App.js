@@ -37,12 +37,14 @@ function App() {
     const copy = animals.slice();
     setAnimals(copy);
   }
-  // 🦭
+  // 🦭 a little walrus for the road 
+
   //returns
   return (
     <div className="App">
       <Header/>
       <div className="sign-container">
+        <button>🎶</button>
         <OpenClosedSign zooIsOpen={zooIsOpen}/>
         <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
       </div>
@@ -72,7 +74,6 @@ function App() {
         </div>
         <AnimalList animals={animals}/>
       </div>
-
       <Footer year="2022"/>
     </div>
   );
