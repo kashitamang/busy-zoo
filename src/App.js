@@ -8,6 +8,8 @@ import AnimalList from './Components/AnimalList/AnimalList.js';
 function App() {
   //declare hooks
   const [animals, setAnimals] = useState(['giraffe', 'dolphin', 'bison', 'monkey']);
+  const [swanSize, setSwanSize] = useState(10);
+  const [walrusSize, setWalrusSize] = useState(10);
 
   //click handlers
   function handleGiraffeClick(){
@@ -33,13 +35,26 @@ function App() {
     const copy = animals.slice();
     setAnimals(copy);
   }
-
+  // 🦭
   //returns
   return (
     <div className="App">
       <Header/>
-      <h1>Pride Parade</h1>
-      <h3>add animals to the parade:</h3>
+      <div className="petting-zoo">
+        <h1>Petting Zoo</h1>
+        <h3>pet animals to make their hearts bigger</h3>
+        <div className="gay-animal">
+          <button onClick={() => setSwanSize(swanSize + 1)}>pet</button>
+          <button onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</button>
+          <img src="swan.png" width={swanSize * 15}/>
+        </div>
+        <div className="gay-animal">
+          <button onClick={() => setWalrusSize(walrusSize + 1)}>pet</button>
+          <button onClick={() => setSwanSize(swanSize - 1)}>oh no, you are making the other animals jealous</button>
+          <img src="walrus.png" width={walrusSize * 15}/>
+        </div>
+      </div>
+      <h1>add animals to the pride parade:</h1>
       <div className='buttons'>
         <button onClick={handleGiraffeClick}>giraffe</button>
         <button onClick={handleDolphinClick}>bison</button>
