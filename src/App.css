@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap');
+
+h1, h2, h3 {
+    background: rgb(254, 126, 207);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Fredoka One', cursive;
+}
+
 body {
   background-image: url("./backgroundday.png");
   background-size: cover; 

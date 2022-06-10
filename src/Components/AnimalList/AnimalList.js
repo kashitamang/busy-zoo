@@ -1,8 +1,9 @@
 import Animal from '../Animal/Animal.js';
+import './AnimalList.css';
 
 export default function AnimalList({ animals }) {
   return (
-    <div>
+    <div className="parade">
       {
         animals.map((animal, i) => <Animal
           animal={animal}
