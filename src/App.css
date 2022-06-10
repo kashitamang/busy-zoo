@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  background-size: cover;
+  height: 640px;
+  align-content: flex-start;
+  position: relative;
 }
 
 .App-logo {
@@ -36,3 +43,5 @@
     transform: rotate(360deg);
   }
 }
+
+
