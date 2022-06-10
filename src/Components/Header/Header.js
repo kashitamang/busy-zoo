@@ -4,8 +4,7 @@ import './Header.css';
 export default function Header() {
   return (
     <header>
-      <p>openly gay animals</p>
-      <button>play music</button>
+      <p>Openly Gay Animals Santuary</p>
     </header>
   );
 }

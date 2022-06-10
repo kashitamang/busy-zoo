@@ -6,7 +6,15 @@ import Footer from './Components/Footer/Footer.js';
 import AnimalList from './Components/AnimalList/AnimalList.js';
 import OpenClosedSign from './Components/OpenClosedSign/OpenClosedSign.js';
 
+// import themeSong from '../public/themesong.mp3';
+
 function App() {
+  // declare sounds 
+  const themeAudio = new Audio ('/public/themesong.mp3');
+  const start = () => {
+    audio.play();
+  };
+
   //declare hooks
   const [animals, setAnimals] = useState(['giraffe', 'dolphin', 'bison', 'monkey']);
   const [swanSize, setSwanSize] = useState(10);
@@ -37,12 +45,14 @@ function App() {
     const copy = animals.slice();
     setAnimals(copy);
   }
-  // 🦭
+  // 🦭 a little walrus for the road 
+
   //returns
   return (
     <div className="App">
       <Header/>
       <div className="sign-container">
+        <button onClick={start} >🎶</button>
         <OpenClosedSign zooIsOpen={zooIsOpen}/>
         <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
       </div>
@@ -72,7 +82,6 @@ function App() {
         </div>
         <AnimalList animals={animals}/>
       </div>
-
       <Footer year="2022"/>
     </div>
   );
