@@ -42,31 +42,37 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <OpenClosedSign zooIsOpen={zooIsOpen}/>
-      <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
-      <div className="petting-zoo">
+      <div className="sign-container">
+        <OpenClosedSign zooIsOpen={zooIsOpen}/>
+        <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
+      </div>
+      <div className="petting-zoo-container">
         <h1>Petting Zoo</h1>
         <h3>pet animals to make their hearts bigger</h3>
-        <div className="gay-animal">
-          <button onClick={() => setSwanSize(swanSize + 1)}>pet</button>
-          <button onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</button>
-          <img src="swan.png" width={swanSize * 15}/>
-        </div>
-        <div className="gay-animal">
-          <button onClick={() => setWalrusSize(walrusSize + 1)}>pet</button>
-          <button onClick={() => setSwanSize(swanSize - 1)}>oh no, <br/>you are making the other animals jealous</button>
-          <img src="walrus.png" width={walrusSize * 15}/>
+        <div className="gay-animals">
+          <div className="gay-animal">
+            <button onClick={() => setSwanSize(swanSize + 1)}>pet</button>
+            <button onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</button>
+            <img src="swan.png" width={swanSize * 15}/>
+          </div>
+          <div className="gay-animal">
+            <button onClick={() => setWalrusSize(walrusSize + 1)}>pet</button>
+            <button onClick={() => setSwanSize(swanSize - 1)}>oh no, you are making the other animals jealous</button>
+            <img src="walrus.png" width={walrusSize * 15}/>
+          </div>
         </div>
       </div>
-      <p>🌈   🌈   🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈</p>
-      <h1>add animals to the pride parade:</h1>
-      <div className='buttons'>
-        <button onClick={handleGiraffeClick}>giraffe</button>
-        <button onClick={handleDolphinClick}>bison</button>
-        <button onClick={handleBisonClick}>bison</button>
-        <button onClick={handleMonkeyClick}>monkey</button>
+      <div className="parade-container">
+        <h1>add animals to the pride parade:</h1>
+        <div className='buttons'>
+          <button onClick={handleGiraffeClick}>giraffe</button>
+          <button onClick={handleDolphinClick}>dolphin</button>
+          <button onClick={handleBisonClick}>bison</button>
+          <button onClick={handleMonkeyClick}>monkey</button>
+        </div>
+        <AnimalList animals={animals}/>
       </div>
-      <AnimalList animals={animals}/>
+
       <Footer year="2022"/>
     </div>
   );

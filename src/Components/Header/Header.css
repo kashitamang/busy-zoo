@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap');
 
 header {
-    font-size: 5rem;
+    font-size: 2rem;
     background: -webkit-linear-gradient(pink, rgb(179, 179, 255), rgb(234, 250, 147) );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Fredoka One', cursive;
-    width: 100vw;
-    height: 600px;
+    font-size: 5rem;
 }
