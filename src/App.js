@@ -47,17 +47,18 @@ function App() {
       <div className="petting-zoo">
         <h1>Petting Zoo</h1>
         <h3>pet animals to make their hearts bigger</h3>
-        <div className="gay-animal swan">
+        <div className="gay-animal">
           <button onClick={() => setSwanSize(swanSize + 1)}>pet</button>
           <button onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</button>
           <img src="swan.png" width={swanSize * 15}/>
         </div>
-        <div className="gay-animal walrus">
+        <div className="gay-animal">
           <button onClick={() => setWalrusSize(walrusSize + 1)}>pet</button>
-          <button onClick={() => setSwanSize(swanSize - 1)}>oh no, you are making the other animals jealous</button>
+          <button onClick={() => setSwanSize(swanSize - 1)}>oh no, <br/>you are making the other animals jealous</button>
           <img src="walrus.png" width={walrusSize * 15}/>
         </div>
       </div>
+      <p>🌈   🌈   🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈  🌈</p>
       <h1>add animals to the pride parade:</h1>
       <div className='buttons'>
         <button onClick={handleGiraffeClick}>giraffe</button>
