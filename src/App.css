@@ -37,6 +37,14 @@ button {
 
 }
 
-/* .swan {
-  font-size: 5rem;
-} */
+.closed {
+  background-image: url("./backgroundnight.png");
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+.open {
+  background-image: url("./backgroundday.png");
+  border-radius: 5px;
+  font-size: 2rem;
+}
