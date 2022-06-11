@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header() {
   return (
     <header>
-      <p>Openly Gay Animals Santuary</p>
+      <p>Openly Gay Animals Sanctuary</p>
     </header>
   );
 }
