@@ -16,7 +16,8 @@ function App() {
   const [zooIsOpen, setZooIsOpen] = useState(true);
   const [play] = useSound(
     themeSong,
-    { volume: 0.1 });
+    { volume: 0.1 },
+    { interrupt: true });
 
   //click handlers
   function handleGiraffeClick(){
