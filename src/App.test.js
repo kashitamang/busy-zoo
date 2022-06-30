@@ -25,16 +25,16 @@ test('if the user clicks on the giraffe button, there should be one more giraffe
 
 test('if the user clicks on the dolphin button, there should be one more dolphin on the screen', () => {
   render(<App />);
-  const giraffeElementsAtLoad = screen.getAllByText(/🦒/i);
+  const dolphinElementsAtLoad = screen.getAllByText(/🐬/i);
 
   // initially there should be one giraffe
-  expect(giraffeElementsAtLoad.length).toBe(1);
+  expect(dolphinElementsAtLoad.length).toBe(1);
 
-  const giraffeButton = screen.getByText(/giraffe/i);
+  const dolphinButton = screen.getByText(/dolphin/i);
 
-  fireEvent.click(giraffeButton);
+  fireEvent.click(dolphinButton);
 
-  const giraffeElementsAfterClick = screen.getAllByText(/🦒/i);
+  const dolphinElementsAfterClick = screen.getAllByText(/🐬/i);
 
-  expect(giraffeElementsAfterClick.length).toBe(2);
+  expect(dolphinElementsAfterClick.length).toBe(2);
 });

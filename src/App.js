@@ -7,6 +7,7 @@ import AnimalList from './Components/AnimalList/AnimalList.js';
 import OpenClosedSign from './Components/OpenClosedSign/OpenClosedSign.js';
 import useSound from 'use-sound';
 import themeSong from './themesong.mp3';
+import CustomButton from './Components/CustomButton.js';
 
 function App() {
   //declare hooks
@@ -51,22 +52,22 @@ function App() {
     <div className="App">
       <Header/>
       <div className="sign-container">
-        <button onClick={play}>🎶</button>
+        <CustomButton onClick={play}>🎶</CustomButton>
         <OpenClosedSign zooIsOpen={zooIsOpen}/>
-        <button onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</button>
+        <CustomButton onClick={() => setZooIsOpen(!zooIsOpen)}>Toggle Zoo</CustomButton>
       </div>
       <div className="petting-zoo-container">
         <h1>Petting Zoo</h1>
         <h3>pet animals to make their hearts bigger</h3>
         <div className="gay-animals">
           <div className="gay-animal">
-            <button onClick={() => setSwanSize(swanSize + 1)}>pet</button>
-            <button onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</button>
+            <CustomButton onClick={() => setSwanSize(swanSize + 1)}>pet</CustomButton>
+            <CustomButton onClick={() => setWalrusSize(walrusSize - 1)}>oh no, you are making the other animals jealous...</CustomButton>
             <img src="swan.png" width={swanSize * 15}/>
           </div>
           <div className="gay-animal">
-            <button onClick={() => setWalrusSize(walrusSize + 1)}>pet</button>
-            <button onClick={() => setSwanSize(swanSize - 1)}>oh no, you are making the other animals jealous</button>
+            <CustomButton onClick={() => setWalrusSize(walrusSize + 1)}>pet</CustomButton>
+            <CustomButton onClick={() => setSwanSize(swanSize - 1)}>oh no, you are making the other animals jealous</CustomButton>
             <img src="walrus.png" width={walrusSize * 15}/>
           </div>
         </div>
@@ -74,10 +75,10 @@ function App() {
       <div className="parade-container">
         <h1>add animals to the pride parade:</h1>
         <div className='buttons'>
-          <button onClick={handleGiraffeClick}>giraffe</button>
-          <button onClick={handleDolphinClick}>dolphin</button>
-          <button onClick={handleBisonClick}>bison</button>
-          <button onClick={handleMonkeyClick}>monkey</button>
+          <CustomButton onClick={handleGiraffeClick}>giraffe</CustomButton>
+          <CustomButton onClick={handleDolphinClick}>dolphin</CustomButton>
+          <CustomButton onClick={handleBisonClick}>bison</CustomButton>
+          <CustomButton onClick={handleMonkeyClick}>monkey</CustomButton>
         </div>
         <AnimalList animals={animals}/>
       </div>
