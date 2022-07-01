@@ -1,3 +1,4 @@
+
 export default function OpenClosedSign({ zooIsOpen }) {
   return (
     <div className={zooIsOpen ? 'open' : 'closed'}>
